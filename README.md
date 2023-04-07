@@ -1,6 +1,17 @@
 # UnsupervisedKVExtraction
 Unsupervised entity extraction from documents of all categories
 
+File descriptions
+------------
+findKeys.py - generate training data ( some details provided in the file comments )
+
+NERPassThreeEmbed_MULTI_NEIGH.py - NER training model (with transformer encoders )
+
+singlePass.py - inference ( along with some additional pre processing for the contours ..for e.g. words like Invoice : 12312 are better split into 2 separate contours using the ":" delim and feature vectors are created appropriately
+
+Theory
+-----------
+
 Labelling entities like KEYS and their VALUES along with drawing contours etc is a massively expensive exercise because of the manual labour involved along with higher chances of errors in the labelling process itself. So the idea here is to let the data tell you whats important. We used a simple hack wherein we picked up contours from the OCR extracted 
 - go through every text extracted and isolate those that are pure text contours
 - once these are found, filter them using a simple rule. The contour to its RIGHT or BELOW must be of a different data type and preferably a NUMERIC / ALPHANUMERIC value
