@@ -1,4 +1,4 @@
-# UnsupervisedKVExtraction
+# Unsupervised Entity Extraction
 Unsupervised entity extraction from documents of all categories
 
 File descriptions
